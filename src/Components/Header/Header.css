@@ -1,0 +1,40 @@
+header{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.Links{
+    display: flex;
+    gap: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.Links a{
+    font-size: 18px;
+    color: #2A2A2A;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover{
+        border-bottom: 2px solid #2A2A2A;
+    }
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+}
+
+.icons > img{
+    width: 30px;
+}
+
+.collection{
+    height: 2px;
+    background-color: #2A2A2A;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
