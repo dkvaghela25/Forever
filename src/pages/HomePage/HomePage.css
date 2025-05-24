@@ -1,0 +1,85 @@
+.HomePage {
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.latest-arrivals {
+    display: flex;
+    border: 1px solid #414141;
+    height: 70vh;
+    width: 100%;
+}
+
+.latest-arrivals-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    background: #fff;
+}
+
+.latest-arrivals-text p {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #414141;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.latest-arrivals-text p::before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 2px;
+    background: #414141;
+    margin-right: 16px;
+}
+
+.latest-arrivals-text h2 {
+    font-size: 4rem;
+    color: #414141;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+.latest-arrivals-text a {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #414141;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    position: relative;
+    padding-bottom: 0;
+}
+
+.latest-arrivals-text a::after {
+    content: "";
+    display: inline-block;
+    width: 70px;
+    height: 2px;
+    background: #414141;
+    margin-left: 16px;
+    vertical-align: middle;
+}
+
+.latest-arrivals-image {
+    width: 50%;
+    background: #ffd7d7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.latest-arrivals-image img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.latest-collections {
+    margin: 100px 0px;
+    
+}
