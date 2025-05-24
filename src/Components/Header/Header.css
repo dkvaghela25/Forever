@@ -74,7 +74,7 @@ nav {
 @media (max-width: 768px) {
     header {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 4fr 4fr 1fr;
         align-items: center;
         padding: 10px;
     }
@@ -82,16 +82,28 @@ nav {
     .Logo {
         grid-column: 1/2;
         justify-self: start;
+        width: 80%;
     }
 
     nav {
         grid-column: 3/4;
-        justify-self: center;
+        grid-row: 1/2;
+        justify-self: end;
     }
 
     .icons {
         grid-column: 2/3;
+        grid-row: 1/2;
         justify-self: end;
+        gap: 10px;
+    }
+
+    .icons>img {
+        width: 20px;
+    }
+
+    .collection {
+        display: none;
     }
 
     .Links {
@@ -111,6 +123,7 @@ nav {
 
     .Links.open {
         display: flex;
+        position: fixed;
     }
 
     .hamburger {
