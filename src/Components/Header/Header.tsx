@@ -5,28 +5,31 @@ import ProfileIcon from "./profile-icon.svg";
 import SearchIcon from "./search icon.svg";
 import ShoppingIcon from "./shopping-icon.svg";
 import MenuIcon from "./menu_icon.svg";
+import { useNavigate , Link } from "react-router-dom";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div>
       <header>
-        <img className="Logo" src={Logo} alt="" />
+        <div onClick={() => navigate("/")} className="logo-container">
+          <img className="Logo" src={Logo} alt="" />
+        </div>
         <nav>
           <div className={`Links ${menuOpen ? "open" : ""}`}>
             <div className="link">
-              <a href="">HOME</a>
+              <Link to="/">HOME</Link>
             </div>
             <div className="link">
-              <a href="">COLLECTION</a>
-              <hr className="collection" />
+              <Link to="/">COLLECTION</Link>
             </div>
             <div className="link">
-              <a href="">ABOUT</a>
+              <Link to="/">ABOUT</Link>
             </div>
             <div className="link">
-              <a href="">CONTACT</a>
+              <Link to="/">CONTACT</Link>
             </div>
           </div>
           <button

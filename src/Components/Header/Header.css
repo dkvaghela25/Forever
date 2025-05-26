@@ -5,6 +5,10 @@ header {
     padding-top: 30px;
 }
 
+header div:first-child {
+    cursor: pointer;
+}
+
 header .Links {
     display: flex;
     gap: 20px;
@@ -31,14 +35,6 @@ header .Links a {
 
 .icons>img {
     width: 30px;
-}
-
-.collection {
-    height: 2px;
-    background-color: #2A2A2A;
-    width: 50%;
-    margin: auto;
-    margin-top: 20px;
 }
 
 nav {
@@ -100,10 +96,6 @@ nav {
 
     .icons>img {
         width: 20px;
-    }
-
-    .collection {
-        display: none;
     }
 
     header .Links {
