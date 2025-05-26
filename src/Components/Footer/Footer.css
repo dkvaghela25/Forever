@@ -4,6 +4,7 @@
     font-size: 18px;
     row-gap: 20px;
     color: #595959;
+    margin-top: 80px;
 }
 
 footer .heading {
@@ -40,6 +41,7 @@ footer hr {
 
 @media (max-width: 768px) {
     .main {
+        margin-top: 20px;
         grid-template-columns: 1fr;
         justify-content: center;
         text-align: center;

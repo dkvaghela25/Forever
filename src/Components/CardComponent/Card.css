@@ -20,7 +20,4 @@
     .Card {
         width: 42vw;
     }
-    .Card:nth-child(n+7) {
-        display: none;
-    }
 }

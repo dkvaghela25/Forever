@@ -20,16 +20,16 @@ function Header() {
         <nav>
           <div className={`Links ${menuOpen ? "open" : ""}`}>
             <div className="link">
-              <Link to="/">HOME</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link>
             </div>
             <div className="link">
-              <Link to="/">COLLECTION</Link>
+              <Link to="/collections" onClick={() => setMenuOpen(false)}>COLLECTION</Link>
             </div>
             <div className="link">
-              <Link to="/">ABOUT</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)}>ABOUT</Link>
             </div>
             <div className="link">
-              <Link to="/">CONTACT</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)}>CONTACT</Link>
             </div>
           </div>
           <button
