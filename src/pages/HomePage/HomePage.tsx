@@ -46,9 +46,9 @@ function HomePage() {
     
       <div className="latest-collections">
         <div className="heading">Latest &nbsp; <b>Collections</b> <hr /></div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
         <div className="Cards">
-          {LatestCollections.map((item, index) => (
+          {LatestCollections.map((item) => (
             <Card image_url={item.image_url} title={item.title} price={item.price}/>
           ))}
         </div>
@@ -56,23 +56,23 @@ function HomePage() {
       
       <div className="latest-collections">
         <div className="heading">Best &nbsp; <b>Seller</b> <hr /></div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
         <div className="Cards">
-          {LatestCollections.slice(0,5).map((item, index) => (
+          {LatestCollections.slice(0,5).map((item) => (
             <Card image_url={item.image_url} title={item.title} price={item.price}/>
           ))}
         </div>
       </div>
 
       <div className="features">
-          {Features.map((item, index) => (
+          {Features.map((item) => (
             <Feature image_url={item.image_url} feature={item.feature} description={item.description}/>
           ))}
       </div>
 
       <div className="subscribe-form">
           <div className='heading'><b>Subscribe now & get 20% off</b></div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
           <form action="">
             <input type="email" placeholder='Enter your email id'/>
             <button>SUBSCRIBE</button>
