@@ -4,6 +4,8 @@ import LatestImage from './header_img.png';
 import Image1 from './Rectangle 3608.png';
 import Image2 from './Rectangle 3609.png';
 import Image3 from './Rectangle 3619.png';
+import Image4 from '../HomePage/p_img18.png'
+import Image5 from '../HomePage/p_img19.png'
 import ExchangeIcon from './exchange_icon.svg'
 import QualityIcon from './quality_icon.svg'
 import SupportIcon from './support_img.svg'
@@ -12,16 +14,17 @@ import Feature from '../../Components/FeatureComponent/Feature';
 function HomePage() { 
 
   let LatestCollections = [
-    {image_url: Image1, title: 'Women Round Neck Cotton Top', price: 149},
-    {image_url: Image2, title: 'Women Round Neck Cotton Top', price: 139},
-    {image_url: Image3, title: 'Men Round Neck Pure Cotton T-shirt', price: 159},
-    {image_url: Image1, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
-    {image_url: Image2, title: 'Men Round Neck Pure Cotton T-shirt', price: 119},
-    {image_url: Image3, title: 'Women Round Neck Cotton Top', price: 149},
-    {image_url: Image1, title: 'Women Round Neck Cotton Top', price: 139},
-    {image_url: Image2, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
-    {image_url: Image3, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
-    {image_url: Image1, title: 'Men Round Neck Pure Cotton T-shirt', price: 119},
+    {product_id: 1, image_url: Image1, title: 'Women Round Neck Cotton Top', price: 149},
+    {product_id: 2, image_url: Image3, title: 'Men Round Neck Pure Cotton T-shirt', price: 159},
+    {product_id: 3, image_url: Image2, title: 'Women Round Neck Cotton Top', price: 139},
+    {product_id: 4, image_url: Image1, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
+    {product_id: 5, image_url: Image3, title: 'Men Round Neck Pure Cotton T-shirt', price: 159},
+    {product_id: 6, image_url: Image1, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
+    {product_id: 7, image_url: Image4, title: 'Women Round Neck Cotton Top', price: 149},
+    {product_id: 8, image_url: Image5, title: 'Women Round Neck Cotton Top', price: 139},
+    {product_id: 9, image_url: Image2, title: 'Women Round Neck Cotton Top', price: 139},
+    {product_id: 10, image_url: Image4, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
+    
   ]
 
   let Features = [
@@ -49,7 +52,12 @@ function HomePage() {
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
         <div className="Cards">
           {LatestCollections.map((item) => (
-            <Card image_url={item.image_url} title={item.title} price={item.price}/>
+            <Card
+              id={item.product_id}
+              image_url={item.image_url}
+              title={item.title}
+              price={item.price}
+            />
           ))}
         </div>
       </div>
@@ -59,7 +67,12 @@ function HomePage() {
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
         <div className="Cards">
           {LatestCollections.slice(0,5).map((item) => (
-            <Card image_url={item.image_url} title={item.title} price={item.price}/>
+            <Card
+              id={item.product_id}
+              image_url={item.image_url}
+              title={item.title}
+              price={item.price}
+            />
           ))}
         </div>
       </div>
