@@ -1,0 +1,26 @@
+.Card {
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title,
+.price {
+    color: #494949;
+    font-weight: 600;
+}
+
+.Card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .Card {
+        width: 42vw;
+    }
+    .Card:nth-child(n+7) {
+        display: none;
+    }
+}

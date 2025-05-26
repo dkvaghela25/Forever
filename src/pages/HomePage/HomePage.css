@@ -1,6 +1,14 @@
 .HomePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 50px 0px;
+    color: #868686;
+}
+
+.HomePage>div {
+    width: 100%;
 }
 
 .latest-arrivals {
@@ -8,6 +16,14 @@
     border: 1px solid #414141;
     height: 70vh;
     width: 100%;
+}
+
+.latest-arrivals>div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .latest-arrivals-text {
@@ -75,11 +91,159 @@
 }
 
 .latest-arrivals-image img {
+    width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
 .latest-collections {
-    margin: 100px 0px;
-    
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.latest-collections .heading,
+.subscribe-form .heading {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.latest-collections hr {
+    margin-left: 20px;
+    color: black;
+    width: 100px;
+    height: 3px;
+    background-color: black;
+    border: none;
+}
+
+.latest-collections b,
+.subscribe-form b {
+    color: black;
+}
+
+.latest-collections .Cards {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.features {
+    margin: 80px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 80px 0px;
+    font-size: 18px;
+}
+
+.subscribe-form form {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+.subscribe-form form input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #414141;
+    font-size: 1rem;
+}
+
+.subscribe-form form button {
+    width:20%;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+    .HomePage {
+        padding: 20px;
+    }
+
+    .latest-arrivals {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .latest-arrivals>div {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .latest-arrivals-text {
+        padding: 20px;
+    }
+
+    .latest-arrivals-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .latest-arrivals-text p {
+        font-size: 1rem;
+    }
+
+    .latest-arrivals-text a {
+        font-size: 1rem;
+    }
+
+    .latest-collections .heading {
+        font-size: 1.5rem;
+    }
+
+    .latest-collections hr {
+        width: 50px;
+        margin-left: 10px;
+    }
+
+    .latest-collections p {
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 80px;
+        align-items: center;
+    }
+
+    .subscribe-form .heading{
+        font-size: 1.5rem;
+    }
+
+    .subscribe-form p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .subscribe-form form {
+        width: 80%;
+    }
+
+    .subscribe-form form input {
+        width: 65%;
+    }
+
+    .subscribe-form form button {
+        width: 35%;
+    }
+
 }
