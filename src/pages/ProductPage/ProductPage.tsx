@@ -22,12 +22,14 @@ function ProductPage() {
     image_url: string;
     title: string;
     price: number;
-}
+    size: string;
+  }
 
 
   const addToCart = (item: Item) => {
     setCart((prevCart) => [...prevCart, item]);
     setCartcount((prevCount) => prevCount + 1);
+    setSize(null); 
   }
 
   return (
@@ -81,12 +83,19 @@ function ProductPage() {
                     ))}
                   </div>
                 </div>
-                <button onClick={() => addToCart({
-                  id: item.product_id,
-                  image_url: item.image_url,
-                  title: item.title,
-                  price: item.price
-                })}>ADD TO CART</button>
+                <button onClick={() => {
+                  if (size) {
+                    addToCart({
+                      id: item.product_id,
+                      image_url: item.image_url,
+                      title: item.title,
+                      price: item.price,
+                      size: size
+                    });
+                  } else {
+                    alert("Please select a size before adding to cart.");
+                  }
+                }}>ADD TO CART</button>
                 <hr />
                 <div>100% Original product.</div>
                 <div>Cash on delivery is available on this product.</div>
@@ -121,18 +130,18 @@ function ProductPage() {
         </div>
 
         <div className="latest-collections">
-        <div className="heading">Related  &nbsp; <b>Products</b> <hr /></div>
-        <div className="Cards">
-          {Collections.slice(0,5).map((item) => (
-            <Card
-              id={item.product_id}
-              image_url={item.image_url}
-              title={item.title}
-              price={item.price}
-            />
-          ))}
+          <div className="heading">Related  &nbsp; <b>Products</b> <hr /></div>
+          <div className="Cards">
+            {Collections.slice(0, 5).map((item) => (
+              <Card
+                id={item.product_id}
+                image_url={item.image_url}
+                title={item.title}
+                price={item.price}
+              />
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

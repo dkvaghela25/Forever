@@ -5,6 +5,7 @@ interface Cart {
     image_url: string;
     title: string;
     price: number;
+    size: string;
 }
 
 

@@ -1,0 +1,91 @@
+.CartItem {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
+    padding: 30px 0px;
+}
+
+.CartItem img {
+    width: 10%;
+}
+
+.item-title {
+    color: #494949;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.CartItem > div {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.item-price {
+    color: #494949;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.size {
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.other-details > div:first-child {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    font-size: 26px;
+    font-weight: 300;
+    border: 1px solid #DFDFDF;
+
+}
+
+.quantity-controller {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.quantity-controller img{
+    width: 14px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.delete-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+    &:hover {
+        transform: scale(1.2);
+    }
+}

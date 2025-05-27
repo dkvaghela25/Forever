@@ -1,0 +1,11 @@
+.CartPage {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Cart {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
