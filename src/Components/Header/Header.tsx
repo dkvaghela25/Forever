@@ -34,7 +34,7 @@ function Header() {
             </Link>
           </div>
           <div className="link">
-            <Link to="/" onClick={() => setMenuOpen(false)}>
+            <Link to="/contactus" onClick={() => setMenuOpen(false)}>
               CONTACT
             </Link>
           </div>

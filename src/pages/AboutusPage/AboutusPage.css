@@ -47,3 +47,26 @@
 .point b {
     color: #2A2A2A;
 }
+
+@media (max-width: 768px) {
+
+    .AboutusPage {
+        padding: 20px;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us > div {
+        width: 100%;
+    }
+
+    .point {
+        padding: 50px;
+    }
+
+    .plus-points {
+        flex-direction: column;
+    }
+}
