@@ -10,6 +10,7 @@ import ExchangeIcon from './exchange_icon.svg'
 import QualityIcon from './quality_icon.svg'
 import SupportIcon from './support_img.svg'
 import Feature from '../../Components/FeatureComponent/Feature';
+import SubscribeForm from '../../Components/SubscribeForm/SubscribeForm';
 
 function HomePage() { 
 
@@ -83,14 +84,8 @@ function HomePage() {
           ))}
       </div>
 
-      <div className="subscribe-form">
-          <div className='heading'><b>Subscribe now & get 20% off</b></div>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-          <form action="">
-            <input type="email" placeholder='Enter your email id'/>
-            <button>SUBSCRIBE</button>
-          </form>
-      </div>
+      <SubscribeForm />
+      
     </div>
   );
 }

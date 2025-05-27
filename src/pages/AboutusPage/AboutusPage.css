@@ -1,0 +1,49 @@
+.AboutusPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-us {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+}
+
+.about-us > div {
+    width: 50%;
+    padding: 10px;
+}
+
+.about-us img {
+    width: 100%;
+    height: auto;
+}
+
+.about-us div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #6D6D6D;
+    font-size: 20px;
+    align-self: center;
+}
+
+.plus-points {
+    display: flex;
+    gap: 0px;
+    color: #6D6D6D;
+}
+
+.point {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 100px;
+    border: 1px solid #ABABAB;
+}
+
+.point b {
+    color: #2A2A2A;
+}
