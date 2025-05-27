@@ -1,32 +1,14 @@
 import Card from '../../Components/CardComponent/Card';
 import './HomePage.css';
 import LatestImage from './header_img.png';
-import Image1 from './Rectangle 3608.png';
-import Image2 from './Rectangle 3609.png';
-import Image3 from './Rectangle 3619.png';
-import Image4 from '../HomePage/p_img18.png'
-import Image5 from '../HomePage/p_img19.png'
 import ExchangeIcon from './exchange_icon.svg'
 import QualityIcon from './quality_icon.svg'
 import SupportIcon from './support_img.svg'
 import Feature from '../../Components/FeatureComponent/Feature';
 import SubscribeForm from '../../Components/SubscribeForm/SubscribeForm';
+import Collections from '../../Collections/Collections';
 
 function HomePage() { 
-
-  let LatestCollections = [
-    {product_id: 1, image_url: Image1, title: 'Women Round Neck Cotton Top', price: 149},
-    {product_id: 2, image_url: Image3, title: 'Men Round Neck Pure Cotton T-shirt', price: 159},
-    {product_id: 3, image_url: Image2, title: 'Women Round Neck Cotton Top', price: 139},
-    {product_id: 4, image_url: Image1, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
-    {product_id: 5, image_url: Image3, title: 'Men Round Neck Pure Cotton T-shirt', price: 159},
-    {product_id: 6, image_url: Image1, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
-    {product_id: 7, image_url: Image4, title: 'Women Round Neck Cotton Top', price: 149},
-    {product_id: 8, image_url: Image5, title: 'Women Round Neck Cotton Top', price: 139},
-    {product_id: 9, image_url: Image2, title: 'Women Round Neck Cotton Top', price: 139},
-    {product_id: 10, image_url: Image4, title: 'Men Round Neck Pure Cotton T-shirt', price: 149},
-    
-  ]
 
   let Features = [
     {image_url: ExchangeIcon, feature: 'Easy Exchange Policy' , description: 'We offer hassle free  exchange policy'},
@@ -52,7 +34,7 @@ function HomePage() {
         <div className="heading">Latest &nbsp; <b>Collections</b> <hr /></div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
         <div className="Cards">
-          {LatestCollections.map((item) => (
+          {Collections.slice(0,10).map((item) => (
             <Card
               id={item.product_id}
               image_url={item.image_url}
@@ -67,7 +49,7 @@ function HomePage() {
         <div className="heading">Best &nbsp; <b>Seller</b> <hr /></div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.</p>
         <div className="Cards">
-          {LatestCollections.slice(0,5).map((item) => (
+          {Collections.slice(0,5).map((item) => (
             <Card
               id={item.product_id}
               image_url={item.image_url}
