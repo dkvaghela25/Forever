@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 import "./App.css";
 import Header from "./Components/Header/Header";
@@ -10,24 +11,39 @@ import AboutusPage from "./pages/AboutusPage/AboutusPage";
 import ContactusPage from "./pages/ContactusPage/ContactusPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import CartPage from "./pages/CartPage/CartPage";
+
+
+import { CartContext } from "./Context/CartContext";
+import { CartCountContext } from "./Context/CartCountContext";
+
 
 function App() {
+
+  const [cart, setCart] = useState<any[]>([]);
+  const [cartCount, setCartcount] = useState<number>(0);
+
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/collections" element={<CollectionPage />} />
-          <Route path="/product/:product_id" element={<ProductPage />} />
-          <Route path="/about" element={<AboutusPage />} />
-          <Route path="/contactus" element={<ContactusPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <CartContext.Provider value={{ cart, setCart }}>
+      <CartCountContext.Provider value={{ cartCount, setCartcount }}>
+        <BrowserRouter>
+          <div className="App">
+            <Header />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/collections" element={<CollectionPage />} />
+              <Route path="/product/:product_id" element={<ProductPage />} />
+              <Route path="/about" element={<AboutusPage />} />
+              <Route path="/contactus" element={<ContactusPage />} />
+              <Route path="/signup" element={<SignupPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/cart" element={<CartPage />} />
+            </Routes>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </CartCountContext.Provider>
+    </CartContext.Provider>
   );
 }
 

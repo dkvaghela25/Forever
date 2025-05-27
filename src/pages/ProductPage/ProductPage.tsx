@@ -3,13 +3,32 @@ import { useParams } from "react-router-dom";
 import StarFull from "./star_icon.svg";
 import StarDull from "./star_dull_icon.svg";
 import Collections from "../../Collections/Collections";
+import { useContext } from 'react';
+import { CartCountContext } from '../../Context/CartCountContext';
+import { CartContext } from '../../Context/CartContext';
 
 import "./ProductPage.css";
 import Card from "../../Components/CardComponent/Card";
 
 function ProductPage() {
+
   const { product_id } = useParams();
   const [size, setSize] = useState<string | null>(null);
+  const { setCartcount } = useContext(CartCountContext);
+  const { setCart } = useContext(CartContext);
+
+  interface Item {
+    id: number;
+    image_url: string;
+    title: string;
+    price: number;
+}
+
+
+  const addToCart = (item: Item) => {
+    setCart((prevCart) => [...prevCart, item]);
+    setCartcount((prevCount) => prevCount + 1);
+  }
 
   return (
     <div>
@@ -62,7 +81,12 @@ function ProductPage() {
                     ))}
                   </div>
                 </div>
-                <button>ADD TO CART</button>
+                <button onClick={() => addToCart({
+                  id: item.product_id,
+                  image_url: item.image_url,
+                  title: item.title,
+                  price: item.price
+                })}>ADD TO CART</button>
                 <hr />
                 <div>100% Original product.</div>
                 <div>Cash on delivery is available on this product.</div>

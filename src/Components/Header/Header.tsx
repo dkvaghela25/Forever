@@ -6,9 +6,14 @@ import SearchIcon from "./search icon.svg";
 import ShoppingIcon from "./shopping-icon.svg";
 import MenuIcon from "./menu_icon.svg";
 import { useNavigate, Link } from "react-router-dom";
+import { useContext } from 'react';
+import { CartCountContext } from '../../Context/CartCountContext';
+
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cartCount, setCartcount } = useContext(CartCountContext);
+
   const navigate = useNavigate();
 
   return (
@@ -50,7 +55,10 @@ function Header() {
       <div className="icons">
         <img src={ProfileIcon} onClick={() => navigate('/login')} alt="" />
         <img src={SearchIcon} alt="" />
-        <img src={ShoppingIcon} alt="" />
+        <div className="shopping-icon" onClick={() => navigate('/cart')}>
+          <img src={ShoppingIcon} alt="" />
+          <div>{cartCount}</div>
+        </div>
       </div>
     </header>
   );
