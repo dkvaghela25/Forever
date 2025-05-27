@@ -67,6 +67,10 @@ nav {
     transition: 0.3s;
 }
 
+.icons img {
+    cursor: pointer;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     header {

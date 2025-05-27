@@ -48,7 +48,7 @@ function Header() {
         </button>
       </nav>
       <div className="icons">
-        <img src={ProfileIcon} alt="" />
+        <img src={ProfileIcon} onClick={() => navigate('/login')} alt="" />
         <img src={SearchIcon} alt="" />
         <img src={ShoppingIcon} alt="" />
       </div>

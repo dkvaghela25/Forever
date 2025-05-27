@@ -8,6 +8,8 @@ import CollectionPage from "./pages/CollectionPage/CollectionPage";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import AboutusPage from "./pages/AboutusPage/AboutusPage";
 import ContactusPage from "./pages/ContactusPage/ContactusPage";
+import SignupPage from "./pages/SignupPage/SignupPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/product/:product_id" element={<ProductPage />} />
           <Route path="/about" element={<AboutusPage />} />
           <Route path="/contactus" element={<ContactusPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
         <Footer />
       </div>
