@@ -13,7 +13,13 @@ function Card(props: CardProps) {
     const navigate = useNavigate();
 
     return (
-        <div className="Card" onClick={() => navigate(`/product/${props.id}`)}>
+        <div
+            className="Card"
+            onClick={() => {
+                window.scrollTo(0, 0);
+                navigate(`/product/${props.id}`);
+            }}
+        >
             <div className="image"><img src={props.image_url} alt="" /></div>
             <div className="title">{props.title}</div>
             <div className="price">${props.price}</div>
