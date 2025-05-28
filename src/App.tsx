@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
-ToastContainer
+import { ToastContainer } from "react-toastify";
 
 import "./App.css";
 import Header from "./Components/Header/Header";
@@ -13,41 +13,45 @@ import ContactusPage from "./pages/ContactusPage/ContactusPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import CartPage from "./pages/CartPage/CartPage";
-
+import DeliveryInformation from "./pages/DeliveryInformation/DeliveryInformation";
+import MyOrders from "./pages/MyOrders/MyOrders";
 
 
 import { CartContext } from "./Context/CartContext";
 import { CartCountContext } from "./Context/CartCountContext";
-import { ToastContainer } from "react-toastify";
-import DeliveryInformation from "./pages/DeliveryInformation/DeliveryInformation";
-
+import { OrdersContext } from "./Context/OrdersContext";
+OrdersContext
 
 function App() {
 
   const [cart, setCart] = useState<any[]>([]);
   const [cartCount, setCartcount] = useState<number>(0);
+  const [Orders, setOrders] = useState<any[]>([]);
 
   return (
     <CartContext.Provider value={{ cart, setCart }}>
       <CartCountContext.Provider value={{ cartCount, setCartcount }}>
-        <BrowserRouter>
-          <div className="App">
-            <ToastContainer />
-            <Header />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/collections" element={<CollectionPage />} />
-              <Route path="/product/:product_id" element={<ProductPage />} />
-              <Route path="/about" element={<AboutusPage />} />
-              <Route path="/contactus" element={<ContactusPage />} />
-              <Route path="/signup" element={<SignupPage />} />
-              <Route path="/login" element={<LoginPage />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/delivery-info" element={<DeliveryInformation />} />
-            </Routes>
-            <Footer />
-          </div>
-        </BrowserRouter>
+        <OrdersContext.Provider value={{ Orders, setOrders }}>
+          <BrowserRouter>
+            <div className="App">
+              <ToastContainer />
+              <Header />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/collections" element={<CollectionPage />} />
+                <Route path="/product/:product_id" element={<ProductPage />} />
+                <Route path="/about" element={<AboutusPage />} />
+                <Route path="/contactus" element={<ContactusPage />} />
+                <Route path="/signup" element={<SignupPage />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/delivery-info" element={<DeliveryInformation />} />
+                <Route path="/my-orders" element={<MyOrders />} />
+              </Routes>
+              <Footer />
+            </div>
+          </BrowserRouter>
+        </OrdersContext.Provider>
       </CartCountContext.Provider>
     </CartContext.Provider>
   );

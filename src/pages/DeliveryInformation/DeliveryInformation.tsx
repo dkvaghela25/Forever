@@ -1,16 +1,40 @@
 import { useContext } from 'react'
 import { CartContext } from '../../Context/CartContext'
+import { OrdersContext } from '../../Context/OrdersContext';
+
+
 import { useNavigate } from 'react-router-dom';
 import './DeliveryInformation.css'
 
 import RazorpayLogo from './razorpay_logo.png';
 import StripeLogo from './stripe_logo.png'
+import { CartCountContext } from '../../Context/CartCountContext';
 
 function DeliveryInformation() {
 
-    const { cart } = useContext(CartContext);
+    const { cart , setCart } = useContext(CartContext);
+    const { setOrders } = useContext(OrdersContext);
+    const { setCartcount } = useContext(CartCountContext);
 
     const navigate = useNavigate();
+
+    const PlaceOrder = () => {
+
+        const currentDate = new Date().toISOString();
+        
+        setOrders((prevOrders) => [
+            ...prevOrders,
+            ...cart.map(item => ({
+                ...item,
+                orderDate: currentDate
+            }))
+        ]);
+
+        setCart([]);
+        setCartcount(0);
+
+        navigate('/my-orders');
+    }
 
     return (
         <div className="DeliveryInformation">
@@ -66,7 +90,7 @@ function DeliveryInformation() {
                             <label htmlFor="cod">CASH ON DELIVERY</label>
                         </div>
                     </form>
-                        <button className="procced-checkout" onClick={() => navigate('/delivery-info')}>Place Order</button>
+                        <button className="procced-checkout" onClick={PlaceOrder}>Place Order</button>
                 </div>
             </div>
         </div>

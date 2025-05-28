@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './CartItem.css'
 import IncrementButton from './increment-button.svg'
 import DecrementButton from './decrement-button.svg'
