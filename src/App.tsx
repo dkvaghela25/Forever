@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
+ToastContainer
 
 import "./App.css";
 import Header from "./Components/Header/Header";
@@ -16,6 +17,7 @@ import CartPage from "./pages/CartPage/CartPage";
 
 import { CartContext } from "./Context/CartContext";
 import { CartCountContext } from "./Context/CartCountContext";
+import { ToastContainer } from "react-toastify";
 
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
       <CartCountContext.Provider value={{ cartCount, setCartcount }}>
         <BrowserRouter>
           <div className="App">
+            <ToastContainer />
             <Header />
             <Routes>
               <Route path="/" element={<HomePage />} />

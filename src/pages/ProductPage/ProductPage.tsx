@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import StarFull from "./star_icon.svg";
 import StarDull from "./star_dull_icon.svg";
-import Collections from "../../Collections/Collections";
+import Collections from "../../assets/Collections/Collections";
 import { useContext } from 'react';
 import { CartCountContext } from '../../Context/CartCountContext';
 import { CartContext } from '../../Context/CartContext';
+import ToastHelper from '../../helper/toastHelper'
 
 import "./ProductPage.css";
 import Card from "../../Components/CardComponent/Card";
@@ -23,13 +24,15 @@ function ProductPage() {
     title: string;
     price: number;
     size: string;
+    quantity: number;
   }
 
 
   const addToCart = (item: Item) => {
     setCart((prevCart) => [...prevCart, item]);
     setCartcount((prevCount) => prevCount + 1);
-    setSize(null); 
+    setSize(null);
+    ToastHelper.success("Item added to cart successfully!");
   }
 
   return (
@@ -90,10 +93,11 @@ function ProductPage() {
                       image_url: item.image_url,
                       title: item.title,
                       price: item.price,
-                      size: size
+                      size: size,
+                      quantity: 1
                     });
                   } else {
-                    alert("Please select a size before adding to cart.");
+                    ToastHelper.error("Please select a size before adding to cart.");
                   }
                 }}>ADD TO CART</button>
                 <hr />

@@ -9,3 +9,72 @@
     flex-direction: column;
     gap: 0px;
 }
+
+.empty-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    color: #707070;
+}
+
+.non-empty-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cart-totals {
+    width: 50%;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-totals div {
+    display: flex;
+    justify-content: space-between;
+    color: #555555;
+    font-weight: 500;
+}
+
+.non-empty-cart .heading {
+    justify-content: start;
+    margin-bottom: 30px;
+}
+
+.cart-totals button {
+    width: 262px;
+    height: 53px;
+    background-color: #232323;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+    align-self: end;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .CartPage {
+        padding: 20px;
+    }
+
+    .Cart {
+        gap: 20px;
+    }
+
+    .cart-totals {
+        width: 100%;
+    }
+
+    .cart-totals button {
+        width: 100%;
+    }
+
+}

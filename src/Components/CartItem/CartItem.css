@@ -21,7 +21,7 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 10px;
 }
 
 .item-price {
@@ -88,4 +88,45 @@
     &:hover {
         transform: scale(1.2);
     }
+}
+
+@media (max-width: 768px) {
+
+    .CartItem {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .CartItem img {
+        width: 20%;
+    }
+
+    .item-title {
+        font-size: 18px;
+    }
+
+    .item-price {
+        font-size: 20px;
+    }
+
+    .size {
+        width: 30px;
+        height: 30px;
+    }
+
+    .quantity {
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .quantity-controller img {
+        width: 12px;
+    }
+
+    .delete-button {
+        width: 20px;
+        height: 20px;
+    }
+
 }

@@ -6,7 +6,7 @@ import QualityIcon from './quality_icon.svg'
 import SupportIcon from './support_img.svg'
 import Feature from '../../Components/FeatureComponent/Feature';
 import SubscribeForm from '../../Components/SubscribeForm/SubscribeForm';
-import Collections from '../../Collections/Collections';
+import Collections from '../../assets/Collections/Collections';
 
 function HomePage() { 
 

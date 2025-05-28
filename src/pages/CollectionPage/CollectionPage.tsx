@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./CollectionPage.css";
-import Collections from "../../Collections/Collections";
+import Collections from "../../assets/Collections/Collections";
 import Card from "../../Components/CardComponent/Card";
 
 function CollectionPage() {
