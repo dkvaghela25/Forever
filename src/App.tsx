@@ -15,9 +15,11 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import CartPage from "./pages/CartPage/CartPage";
 
 
+
 import { CartContext } from "./Context/CartContext";
 import { CartCountContext } from "./Context/CartCountContext";
 import { ToastContainer } from "react-toastify";
+import DeliveryInformation from "./pages/DeliveryInformation/DeliveryInformation";
 
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
               <Route path="/signup" element={<SignupPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/delivery-info" element={<DeliveryInformation />} />
             </Routes>
             <Footer />
           </div>

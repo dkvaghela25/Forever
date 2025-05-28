@@ -1,0 +1,103 @@
+.DeliveryInformation {
+    display: flex;
+    gap: 200px;
+}
+
+.DeliveryInformation>div {
+    width: 50%;
+}
+
+.delivery-info form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.DeliveryInformation form>div {
+    display: flex;
+    gap: 10px;
+}
+
+.DeliveryInformation form input {
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    color: #8B8B8B;
+    border: 1px solid #C5C5C5;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-method .heading {
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.methods {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.methods>div {
+    width: 30%;
+    padding: 15px 25px;
+    border: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.methods label {
+    display: flex;
+    align-items: center;
+}
+
+.methods img {
+    height: 24px;
+    object-fit: contain;
+}
+
+.methods input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    accent-color: #00C720;
+}
+
+.methods>div {
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+
+    .DeliveryInformation {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding: 20px;
+    }
+
+    .DeliveryInformation>div {
+        width: 100%;
+    }
+
+    .methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .methods>div {
+        width: 100%;
+    }
+
+}

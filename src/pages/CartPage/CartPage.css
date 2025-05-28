@@ -41,7 +41,7 @@
     font-weight: 500;
 }
 
-.non-empty-cart .heading {
+.cart-totals .heading {
     justify-content: start;
     margin-bottom: 30px;
 }

@@ -1,14 +1,16 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../Context/CartContext';
 import CartItem from '../../Components/CartItem/CartItem';
 import './CartPage.css';
 import Collections from '../../assets/Collections/Collections';
 import Card from '../../Components/CardComponent/Card';
+import { useNavigate } from 'react-router-dom';
 
 function CartPage() {
 
     const { cart } = useContext(CartContext);
-    let [subtotal, setSubtotal] = useState(0);
+    
+    const navigate = useNavigate();
 
     console.log(cart);
 
@@ -67,7 +69,7 @@ function CartPage() {
                             <div><b>Total</b></div>
                             <div><b>${cart.reduce((acc, item) => acc + item.price * item.quantity, 0) - 10}</b></div>
                         </div>
-                        <button className="procced-checkout">Proceed to checkout</button>
+                        <button className="procced-checkout" onClick={() => navigate('/delivery-info')}>Proceed to checkout</button>
                     </div>
 
                 </div>
