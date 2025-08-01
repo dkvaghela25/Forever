@@ -3,7 +3,7 @@ import "./ContactusPage.css";
 import ContactImage from "./contact_img.png";
 
 
-function ContactusPage() {
+function ContactsPage() {
   return (
     <div className="ContactusPage">
       <div className="heading">
@@ -31,4 +31,4 @@ function ContactusPage() {
   );
 }
 
-export default ContactusPage;
+export default ContactsPage;

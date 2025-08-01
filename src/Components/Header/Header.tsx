@@ -39,8 +39,13 @@ function Header() {
             </Link>
           </div>
           <div className="link">
-            <Link to="/contactus" onClick={() => setMenuOpen(false)}>
+            <Link to="/contacts" onClick={() => setMenuOpen(false)}>
               CONTACT
+            </Link>
+          </div>
+          <div className="link">
+            <Link to="/my-orders" onClick={() => setMenuOpen(false)}>
+              ORDERS
             </Link>
           </div>
         </div>

@@ -1,6 +1,9 @@
 .DeliveryInformation {
     display: flex;
-    gap: 200px;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 .DeliveryInformation>div {
@@ -8,10 +11,11 @@
 }
 
 .delivery-info form {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
+    max-width: 600px;
 }
 
 .DeliveryInformation form>div {
@@ -20,70 +24,98 @@
 }
 
 .DeliveryInformation form input {
-    height: 50px;
+    height: 54px;
     width: 100%;
-    padding: 20px;
-    color: #8B8B8B;
-    border: 1px solid #C5C5C5;
-    font-size: 18px;
-    border-radius: 5px;
+    padding: 16px;
+    color: #4A4A4A;
+    border: 1.5px solid #C5C5C5;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+}
+
+.DeliveryInformation form input:focus {
+    outline: none;
+    border-color: #00C720;
+    box-shadow: 0 0 0 3px rgba(0, 199, 32, 0.1);
 }
 
 .payment-method {
     display: flex;
     flex-direction: column;
+    background-color: #FAFAFA;
+    padding: 30px;
+    border-radius: 12px;
 }
 
 .payment-method .heading {
-    font-size: 20px;
-    margin-top: 40px;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #333;
 }
 
 .methods {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: stretch;
+    gap: 16px;
     margin-top: 20px;
     justify-content: space-between;
 }
 
 .methods>div {
-    width: 30%;
-    padding: 15px 25px;
-    border: 1px solid #E5E7EB;
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.methods>div:hover {
+    border-color: #00C720;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .methods label {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .methods img {
-    height: 24px;
+    height: 28px;
     object-fit: contain;
 }
 
 .methods input[type="radio"] {
-    width: 16px;
-    height: 16px;
-    margin-right: 12px;
+    width: 18px;
+    height: 18px;
+    margin-right: 14px;
     accent-color: #00C720;
+    cursor: pointer;
 }
 
 .methods>div {
-    gap: 10px;
+    gap: 12px;
     justify-content: flex-start;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .DeliveryInformation {
+        gap: 40px;
+    }
+}
 
+@media (max-width: 768px) {
     .DeliveryInformation {
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+        gap: 40px;
         padding: 20px;
     }
 
@@ -93,11 +125,15 @@
 
     .methods {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 
     .methods>div {
         width: 100%;
+        padding: 16px;
     }
 
+    .payment-method {
+        padding: 20px;
+    }
 }

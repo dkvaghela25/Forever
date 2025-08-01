@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import CollectionPage from "./pages/CollectionPage/CollectionPage";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import AboutusPage from "./pages/AboutusPage/AboutusPage";
-import ContactusPage from "./pages/ContactusPage/ContactusPage";
+import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import CartPage from "./pages/CartPage/CartPage";
@@ -41,7 +41,7 @@ function App() {
                 <Route path="/collections" element={<CollectionPage />} />
                 <Route path="/product/:product_id" element={<ProductPage />} />
                 <Route path="/about" element={<AboutusPage />} />
-                <Route path="/contactus" element={<ContactusPage />} />
+                <Route path="/contacts" element={<ContactsPage />} />
                 <Route path="/signup" element={<SignupPage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/cart" element={<CartPage />} />
