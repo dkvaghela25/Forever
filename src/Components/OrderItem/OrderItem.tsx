@@ -1,5 +1,4 @@
 import './OrderItem.css'
-import ToastHelper from '../../helper/toastHelper';
 
 interface OrderItemProps {
     id: number;

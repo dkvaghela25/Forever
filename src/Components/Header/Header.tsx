@@ -12,7 +12,7 @@ import { CartCountContext } from '../../Context/CartCountContext';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { cartCount, setCartcount } = useContext(CartCountContext);
+  const { cartCount } = useContext(CartCountContext);
 
   const navigate = useNavigate();
 
